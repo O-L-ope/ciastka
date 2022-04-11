@@ -1,0 +1,28 @@
+button#info{
+    background-color: white;
+    border: white;
+}
+p#bob{
+    font-weight: bold;
+}
+body{
+    background-color: gray;
+}
+#Akceptuje{
+    background-color: goldenrod;
+    text-align: center;
+    border: 3px solid;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+#b1{
+    background-color: green;
+    text-decoration: white;
+}
+#b2{
+    background-color: rgb(107, 0, 0);
+}

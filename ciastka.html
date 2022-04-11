@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciasteczka</title>
+
+    <link href="cookiesy.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <!-- <p id="bob" >Informacja o ciasteczkach</p>
+    <button onclick="akceptuj()">Akceptuję!</button>
+    <button onclick="nieakceptuj()">Rezygnuję!</button>
+    <button id="info" onclick="wiecej()">Więcej informacji!</button> -->
+    
+    <div id="Akceptuje">
+        <p>Informacja o ciasteczkach</p>
+        <button id="b1" onclick="akceptuj()">Akceptuję!</button>
+        <button id="b2" onclick="nieakceptuj()">Rezygnuję!</button>
+        <!-- <button id="info" onclick="wiecej()">Więcej informacji!</button> -->
+    </div>
+
+
+
+
+
+    <script>
+        function akceptuj(){
+            document.cookie = "Ciastko=true";
+            window.location.reload(true);
+        }    
+        // ^^^ akceptacja
+        
+        function nieakceptuj(){
+            document.cookie = "Ciastko=false";
+            window.location.reload(true);
+        }
+        // ^ ^ ^ rezygnacja
+        
+        // function wiecej(){
+        //     console.log("cos");
+        //     window.location.reload(true);
+        // }
+        // ^ ^ ^ informacje
+        
+        function Cookies(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        };
+
+        if (Cookies("Ciastko") == "true") {
+            document.getElementById("Akceptuje").style.display = "none";
+           
+        
+        } else if (Cookies("Ciastko") == "false") {
+            document.getElementById("Akceptuje").style.display = "none";
+            window.alert("Nie możesz przeglądać tej strony bez zakceptowania ciasteczek");
+        }
+        //function wiecej(){
+            //window.alert("Informacje")//
+       // }
+         
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
